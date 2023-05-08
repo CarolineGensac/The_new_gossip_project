@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheNewGossipProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+  </head>
+  <body>
+
+<h1 class="display-4">Bienvenue sur le Site des hypocrites <%= params[:id] %></h1>
+
+<p>On vous présente la team responsable de cette véritable boîte de Pandore :<%= link_to "ici", team_path %>
+
+</p>
+
+</header>
+
+
+ 
+    <%= yield %>
+    
+  </body>
+</html>
