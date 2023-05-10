@@ -5,8 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require 'faker'
+# require 'faker'
 
-1.times do
-  user = User.create!(first_name: Faker::TvShows::FinalSpace.character)
-end
+ #5.times do
+#   user = User.create!(first_name: Faker::TvShows::FinalSpace.character)
+# end
+
+# 5.times do
+#   user = User.create!(title: Faker::TvShows::FinalSpace.character, content: )
+# end

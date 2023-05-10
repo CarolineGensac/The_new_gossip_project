@@ -12,7 +12,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
-  <body>
+  <body data-turbo="false">
   <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="<%= root_path %>">The New Gossip Project</a>
@@ -30,15 +30,8 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= contact_path %>">Contacts</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Actions
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Add a bitchy gossip</a>
-          <a class="dropdown-item" href="#">Read all the gossips</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= new_path %>">Add a gossip</a>
       </li>
     </ul>
   </div>

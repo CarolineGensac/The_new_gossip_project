@@ -3,5 +3,10 @@ Rails.application.routes.draw do
    get '/home', to: 'static_pages#home'
    get '/team', to: 'team_pages#team'
    get '/contact', to: 'contact_pages#contact'
+   #get '/form', to: 'gossipform_pages#form'
+   get '/new', to: 'gossipform_pages#new'
+
    get '/:id', to: 'static_pages#home'
-end
+
+   resources :gossipform_pages
+   end

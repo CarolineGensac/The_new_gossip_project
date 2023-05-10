@@ -11,21 +11,42 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
   </head>
-  <body>
 
+  <body>
+<div class="container">
 <h1 class="display-4">Bienvenue sur le Site des hypocrites <%= params[:id] %></h1>
 
-<p>On vous présente la team responsable de cette véritable boîte de Pandore :<%= link_to "ici", team_path %>
+  <% @gossips.each do |gossip| %>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-3 card-home">
+            <div class="card-body mt-auto mb-auto">
+              <h5 class="card-title"><%= gossip.title %></h5>
+              <p class="card-text"><em><%= gossip.content %></em></p>
+              <a href="potin/<%=gossip.id%>" class="btn btn-primary mb-0">Voir le potin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-</p>
+<%# <% @gossips.each do |gossip| %> %>
+    <%# <div class="card"> %>
+      <%# <div class="card-body"> %>
+        <%# <h5 class="card-title"><%= gossip.title %></h5> %>
+        <%# <p class="card-text"><em><%= gossip.content %></em></p> %>
+        <%# <p>Degré d'importance: <%= gossip.importance %></p> %>
+        <%# <a href="<%= gossip_path(gossip) %>" class="btn btn-primary">Voir le potin</a> %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# <% end %> %>
+</div>
 
-</header>
-
-
- 
-    <%= yield %>
+ <%= yield %>
     
   </body>
 </html>

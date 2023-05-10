@@ -1,0 +1,2 @@
+module GossipformPagesHelper
+end
