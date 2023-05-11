@@ -7,10 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # require 'faker'
 
- #5.times do
-#   user = User.create!(first_name: Faker::TvShows::FinalSpace.character)
-# end
+ 5.times do
+   user = User.create!(first_name: Faker::TvShows::FinalSpace.character, email: Faker::Internet.email, password_digest: )
+ end
 
-# 5.times do
-#   user = User.create!(title: Faker::TvShows::FinalSpace.character, content: )
-# end
