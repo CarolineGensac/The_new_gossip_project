@@ -6,13 +6,6 @@
 <body data-turbo="false">
 
 <%= form_tag url_for(action: 'create'), method: "post" do %> 
-  <% if @user.errors.any? %>
-  <div class="alert alert-danger">
-  <% @user.errors.full_messages.each do |message| %>
-  <div ><% message %></div>
-  <%end%>
-  </div>
-  <%end%>
 
         <div class="form-group row">
     <%= label_tag 'first_name', 'Pseudo', class: 'col-sm-2 col-form-label' %>

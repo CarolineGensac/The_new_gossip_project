@@ -14,9 +14,8 @@ class UsersController < ApplicationController
       'password' => params[:password])
         if @user.save
           session[:user_id] = @user.id
-          redirect_to root_path, notice: "Compte créé avec succès"
+          redirect_to root_path
         else
-
           render :new
         end
   end
