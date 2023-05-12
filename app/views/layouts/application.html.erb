@@ -33,12 +33,16 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= new_user_path %>">Sign in</a>
       </li>
-       <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="<%= new_session_path %>">Log in</a>
       </li>
+
+      <%= button_to "Déconnexion", root_path, method: :delete, class: "btn btn-danger" %>
     </ul>
   </div>
 </nav>
+<h6 class="display-4">Bienvenue <%= current_user.first_name%> </h6> 
+
 
 </header>
 
